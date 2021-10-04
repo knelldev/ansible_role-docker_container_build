@@ -1,0 +1,25 @@
+###############################################################################
+# Default values for role - Might contain placeholders for passwords - NOT live
+###############################################################################
+---
+
+os_proxy:                   # [dict] Proxy configuration
+  enabled: false
+  use_login: false          # [bool] This requires username and password attributes below
+  http:
+    scheme: http
+    url: proxy.local
+    port: 3128
+    username: user
+    password: password      # Placeholder password
+  https:
+    scheme: http
+    url: proxy.local
+    port: 3128
+    username: user
+    password: password      # Placeholder password
+  no_proxy: 
+    - "127.0.0.1"
+    - localhost
+  no_proxy_wildcard:        # [list(str)] This works for java and some other application. Will append the list above.
+    - "*.wildcard.local"
